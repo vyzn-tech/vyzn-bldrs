@@ -20,6 +20,6 @@ services:
     volumes:
       - "${PWD}:/app"
     ports:
-      - "8120:8080"
+      - "8120:8120"
     working_dir: /app
     stdin_open: true

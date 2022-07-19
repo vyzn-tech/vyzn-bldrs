@@ -4,4 +4,4 @@ WORKDIR /var/source
 COPY . /var/source
 RUN /var/source/.devops/docker/frontend/build.sh
 
-CMD runuser -u node -- yarn serve
+CMD runuser -u node -- yarn start
