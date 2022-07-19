@@ -1,0 +1,25 @@
+version: '3.3'
+
+networks:
+  default: {}
+  dbs_network:
+    external: true
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: .devops/docker/frontend/Dockerfile
+    networks:
+      default:
+        aliases:
+          - dev.vyzn-bldrs.docker
+      dbs_network:
+        aliases:
+          - bldrs
+    volumes:
+      - "${PWD}:/app"
+    ports:
+      - "8120:8080"
+    working_dir: /app
+    stdin_open: true
