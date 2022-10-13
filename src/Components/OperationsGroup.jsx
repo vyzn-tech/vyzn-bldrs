@@ -69,28 +69,19 @@ export default function OperationsGroup({unSelectItem, installPrefix, fileOpen, 
     <div className={classes.container}>
       <ButtonGroup orientation="vertical" >
         <ShareControl viewer={viewer}/>
-      </ButtonGroup>
-      {!isMobile && <Divider />}
-      <ButtonGroup orientation="vertical" >
-        <TooltipIconButton
-          title='Notes'
-          icon={<NotesIcon/>}
-          selected={isCommentsOn}
-          onClick={() => toggle('Notes')}
-        />
-        <TooltipIconButton
-          title="Properties"
-          onClick={() => toggle('Properties')}
-          selected={isPropertiesOn}
-          icon={<ListIcon/>}
-        />
-        {isMobile &&
-          <TooltipIconButton
-            title='Elements Hierarchy'
-            selected={showNavPanel}
-            onClick={onClickMenuCb}
-            icon={<TreeIcon/>}
-          />
+        {
+          // vyzn customization:
+          // Hide the issues control.
+        }
+      </div>
+      <div className={classes.lowerGroup}>
+        {itemPanelControl}
+        {useIsMobile() ?
+         <TooltipIconButton
+           title="Section plane"
+           onClick={() => viewer.clipper.createPlane()}
+           icon={<CutPlaneIcon/>}/>:
+          ''
         }
         <CutPlaneMenu/>
         <ExtractLevelsMenu/>

@@ -14,11 +14,11 @@ export default function Logo({onClick}) {
   const classes = useStyles(useTheme())
   return (
     <div className={classes.logoGroup}>
-      <Tooltip title={`Bldrs: ${PkgJson.version}`} describeChild placement="right">
-        <IconButton disableRipple onClick={onClick}>
-          <LogoIcon/>
-        </IconButton>
-      </Tooltip>
+      {
+        // vyzn customization:
+        // Hide the issues control.
+      }
+      Powered by <a href="https://bldrs.ai/">BLDRS</a>
     </div>
   )
 }
@@ -27,7 +27,9 @@ export default function Logo({onClick}) {
 const useStyles = makeStyles((theme) => ({
   logoGroup: {
     'position': 'fixed',
-    'bottom': '-60px',
+    // vyzn customization:
+    // Move to the bottom since there is no issues control anymore.
+    'bottom': '20px',
     'left': '12px',
     '& svg': {
       'width': '50px',
