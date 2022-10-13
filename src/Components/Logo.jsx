@@ -1,9 +1,5 @@
 import React from 'react'
-import IconButton from '@mui/material/IconButton'
-import Tooltip from '@mui/material/Tooltip'
 import {makeStyles, useTheme} from '@mui/styles'
-import LogoIcon from '../assets/LogoB_4.svg'
-import PkgJson from '../../package.json'
 
 
 /**
@@ -15,7 +11,7 @@ export default function Logo({onClick}) {
   return (
     <div className={classes.logoGroup}>
       {
-        // vyzn customization: 
+        // vyzn customization:
         // Hide the issues control.
       }
       Powered by <a href="https://bldrs.ai/">BLDRS</a>
@@ -27,10 +23,10 @@ export default function Logo({onClick}) {
 const useStyles = makeStyles((theme) => ({
   logoGroup: {
     'position': 'fixed',
-    // vyzn customization: 
+    // vyzn customization:
     // Move to the bottom since there is no issues control anymore.
     'bottom': '20px',
-    'left': '20px',
+    'left': '12px',
     '& svg': {
       'width': '50px',
       '@media (max-width: 900px)': {
