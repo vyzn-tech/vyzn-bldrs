@@ -1,24 +1,21 @@
-import React, {useContext} from 'react'
-import {makeStyles, useTheme} from '@mui/styles'
+import React from 'react'
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
-import {ColorModeContext} from '../Share'
+import {makeStyles, useTheme} from '@mui/styles'
+import LogoIcon from '../assets/LogoB_4.svg'
 import PkgJson from '../../package.json'
-import {TooltipIconButton} from './Buttons'
-import LogoIcon from '../assets/2D_Icons/Logo.svg'
 
 
 /**
- * @param {function} onClick function triggered when logo is cliked
- * @return {Object} React component
+ * @param {Function} onClick function triggered when logo is cliked
+ * @return {object} React component
  */
 export default function Logo({onClick}) {
   const classes = useStyles(useTheme())
-  const theme = useContext(ColorModeContext)
   return (
     <div className={classes.logoGroup}>
       {
-        // vyzn customization: 
+        // vyzn customization:
         // Hide the issues control.
       }
       Powered by <a href="https://bldrs.ai/">BLDRS</a>
@@ -30,18 +27,14 @@ export default function Logo({onClick}) {
 const useStyles = makeStyles((theme) => ({
   logoGroup: {
     'position': 'fixed',
-    // vyzn customization: 
+    // vyzn customization:
     // Move to the bottom since there is no issues control anymore.
     'bottom': '20px',
-    'left': '20px',
+    'left': '12px',
     '& svg': {
-      'width': '140px',
+      'width': '50px',
       '@media (max-width: 900px)': {
-        width: '120px',
-        marginBottom: '-50px',
-      },
-      '@media (max-width: 350px)': {
-        display: 'none',
+        width: '50px',
       },
       '& .left-face': {
         fill: theme.palette.primary.light,
