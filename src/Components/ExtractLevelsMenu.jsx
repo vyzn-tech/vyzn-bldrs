@@ -61,7 +61,7 @@ export default function ExtractLevelsMenu({listOfOptions, icon, title}) {
 
   useEffect(() => {
     fetchStorey()
-  }, [model])
+  }, [model, fetchStorey])
 
   const fetchStorey = async () => {
     const allStorey = await extractHeight(model)

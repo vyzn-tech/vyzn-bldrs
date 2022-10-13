@@ -3,15 +3,12 @@ import {useNavigate} from 'react-router-dom'
 import MenuItem from '@mui/material/MenuItem'
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
-import Tooltip from '@mui/material/Tooltip'
-import ToggleButton from '@mui/material/ToggleButton'
 import TextField from '@mui/material/TextField'
 import {makeStyles, useTheme} from '@mui/styles'
 import Dialog from './Dialog'
 import {TooltipIconButton} from '../Components/Buttons'
 import {ColorModeContext} from '../Context/ColorMode'
 import ModelsIcon from '../assets/2D_Icons/Model.svg'
-import OpenIcon from '../assets/2D_Icons/Open.svg'
 import UploadIcon from '../assets/2D_Icons/Upload.svg'
 
 
@@ -33,18 +30,6 @@ export default function OpenModelControl({fileOpen}) {
           // vyzn customization:
           // Hide the issues control.
         }
-        {/* <Tooltip title={'Open IFC'} describeChild placement={'top'}>
-          <ToggleButton
-            selected={isDialogDisplayed}
-            onClick={() => {
-              setIsDialogDisplayed(true)
-            }}
-            color='primary'
-            value={'something'}
-          >
-            <OpenIcon/>
-          </ToggleButton>
-        </Tooltip> */}
       </Paper>
       {isDialogDisplayed &&
         <OpenModelDialog

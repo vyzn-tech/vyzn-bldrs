@@ -552,12 +552,12 @@ const useStyles = makeStyles({
 
   },
   search: {
-    // vyzn customization: 
+    // vyzn customization:
     // Center the search box instead of positioning it at the left hand side.
     position: 'absolute',
     top: '20px',
     left: '50%',
-    transform: 'translate(-50%, 0%)'
+    transform: 'translate(-50%, 0%)',
   },
   view: {
     position: 'absolute',
