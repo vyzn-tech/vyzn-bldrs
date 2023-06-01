@@ -91,7 +91,6 @@ module.exports = {
     'react/jsx-closing-tag-location': 'error',
     'react/self-closing-comp': 'error',
     'valid-jsdoc': 'off',
-    'jsdoc/newline-after-description': 'error',
     'jsdoc/check-types': 'error',
     'jsdoc/require-param-description': 'off',
     'jsdoc/require-returns-description': 'off',
